@@ -1,0 +1,31 @@
+---
+layout: base
+---
+
+{% if site.inc.cover_image %}
+<div class="article-cover">
+    <div>
+        <img src="/images/{{ site.inc.cover_image }}" class="image">
+    </div>
+</div>
+{% endif %}
+
+<div class="container">
+<!--     <h1 style="font-style:italic">About me</h1>
+    <p>&#160; &#160; &#160; &#160;长期的工作和生活，可以学习和积累很多有用、有趣的东西。此网站的目的就在于将平时思考和积累的东西进行总结，并分享给大家。同时，欢迎交流。</p> -->
+    <br/>
+    <h1 style="font-style:italic">Contact me</h1>
+    {% if site.inc.weibo %}
+    <div>Follow me on <a href="https://weibo.com/{{ site.inc.weibo }}" title="Follow on weibo" target="_blank" style="font-style:italic">sina weibo</a></div>
+    {% endif %}
+    {% if site.inc.github %}
+    <div>Follow me on <a href="https://github.com/{{ site.inc.github }}" title="Follow on github" target="_blank" style="font-style:italic">github</a></div>
+    {% endif %}
+    {% if site.inc.linkedin %}
+    <div>Know me on <a href="http://www.linkedin.com/pub/{{ site.inc.linkedin }}" title="Follow on linkedin" target="_blank" style="font-style:italic">linkedin</a></div>
+    {% endif %}
+    
+    <div>E-mail to me: <a href="mailto:skyouth1010@163.com" style="font-style:italic">skyouth1010@163.com</a></div>
+    <p>中国. 杭州</p>
+    <br/>
+</div>

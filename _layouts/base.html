@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:wb="http://open.weibo.com/wb">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} &mdash; {{ site.inc.title }}{% else %}{{ site.inc.title }} &mdash; {{ site.inc.subtitle }}{% endif %}</title>
+    {% stylesheet main %}
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/{{ site.inc.logo }}"/>
+    <link href="{{ site_url }}/feed.xml" rel="alternate" type="application/rss+xml" title="{{ site.inc.title }}" />
+    <meta name="title" content="{% if page.title %}{{ page.title }} {% else %}{{ site.inc.title }}{% endif %}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    {% if page.site.gplus %}<link rel="publisher" href="https://plus.google.com/{{ site.inc.gplus }}">{% endif %} 
+    {% if page.author.gplus %}<link rel="author" href="https://plus.google.com/{{ page.author.gplus }}">{% endif %}       
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} {% else %}{{ site.inc.title }}{% endif %}"/>
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
+    {% if page.cover_image %}
+    <meta property="og:image" content="{{ site.url }}/images/{{ page.cover_image }}"/>
+    {% if page.main_image %}
+    <meta property="og:image" content="{{ site.url }}/images/{{ page.main_image }}"/>  
+    {% endif %}
+    <meta property="og:image" content="{{ site.url }}/images/{{ site.inc.logo }}"/>   
+    {% endif %}
+    {% if page.excerpt %}
+    <meta property="og:description" content="{{ page.excerpt }}"/>
+    <meta name="description" content="{{ page.excerpt }}"/>
+    {% endif %}
+    <meta property="og:site_name" content="{{ site.inc.title }}">  
+    <meta property="wb:webmaster" content="5201cdb8e10dbfa6" />  
+    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script> 
+</head>
+<body>
+    
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <a href="/" class="home">Home</a>
+            <a href="{{ site.baseurl }}/tags/"><b>Categories</b></a>
+            <a href="{{ site.baseurl }}/archive/">Archive</a>
+            <a href="{{ site.baseurl }}/about/">Contact me</a>
+        </nav>
+    </header>
+</section>
+
+{{ content }}
+
+{% include _footer.html %}
+
+{% include _scripts.html %}
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+---
+layout: base
+---
+<div class="blog-cover" style="background-image:url(/images/{{ site.inc.cover_image }});">
+    
+    <section>
+        <div class="container">
+            <h1>{{ site.inc.title }}</h1>
+            {% if site.inc.subtitle %}<h3>{{ site.inc.subtitle }}</h3>{% endif %}
+            <i></i>
+            {% if site.inc.weibo %}
+            <a href="https://weibo.com/{{ site.inc.weibo }}" title="Follow on weibo" target="_blank"><i class="am-icon am-icon-weibo"></i></a>
+            {% endif %}
+            {% if site.inc.facebook %}
+            <a href="https://facebook.com/{{ site.inc.facebook }}" title="Follow on facebook" target="_blank"><i class="icon icon-facebook"></i></a>
+            {% endif %}
+            {% if site.inc.github %}
+            <a href="https://github.com/{{ site.inc.github }}" title="Follow on github" target="_blank"><i class="am-icon am-icon-github"></i></a>
+            {% endif %}
+            {% if site.inc.linkedin %}
+            <a href="http://www.linkedin.com/pub/{{ site.inc.linkedin }}" title="Follow on linkedin" target="_blank"><i class="am-icon am-icon-linkedin"></i></a>
+            {% endif %}
+        </div>
+    </section>
+</div>
+
+
+<article class="container">
+{% include _home.html %}
+</article>

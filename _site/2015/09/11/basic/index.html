@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html xmlns:wb="http://open.weibo.com/wb">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVA系列之－－基础知识 &mdash; Skyouth's Pages</title>
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/logo.png"/>
+    <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Skyouth's Pages" />
+    <meta name="title" content="JAVA系列之－－基础知识 ">
+    <link rel="canonical" href="/2015/09/11/basic/">
+     
+           
+    <meta property="og:title" content="JAVA系列之－－基础知识 "/>
+    <meta property="og:url" content="/2015/09/11/basic/"/>
+    
+    <meta property="og:image" content="/images/blog-cover.jpg"/>
+    
+    <meta property="og:image" content="/images/logo.png"/>   
+    
+    
+    <meta property="og:description" content="<h1>位移和位运算</h1>
+
+<p>&lt;&lt;，左移，3&lt;&lt;2=12，（Java的原始类型里没有无符号类型，int为有符号32位数，最高位为1表示负数，最高位为0表示正数，因此1&lt;&lt;31将溢出）
+负数的表示为其正数的相反数加1,如:</p>
+
+<p>-6为00000000 00000000 00000000 00000110变反得到
+11111111 11111111 11111111 11111001,加1得到
+11111111 11111111 11111111 11111010。</p>
+
+<p>&gt;&gt;，右移，12&gt;&gt;2=3，如果带符号，高位补符号位，-15&gt;&gt;2=-4</p>
+
+<p>&gt;&gt;&gt;，右移（包括符号位），12&gt;&gt;2=3，如果带符号，符号位也将右移，高位补零。
+与&amp;：当两边操作数的位同时为1时，结果为1，否则为0。如1100&amp;1010=1000　　</p>
+
+<p>或| ：当两边操作数的位有一边为1时，结果为1，否则为0。如1100|1010=1110　　</p>
+
+<p>非~：0变1,1变0</p>
+
+<p>异或^：两边的位不同时，结果为1，否则为0.如1100^1010=0110</p>
+
+<p>平时多多使用位运算提升逼格：
+判断奇偶数：a&amp;1==0代表偶数，而不是普通的a%2==0；</p>
+"/>
+    <meta name="description" content="<h1>位移和位运算</h1>
+
+<p>&lt;&lt;，左移，3&lt;&lt;2=12，（Java的原始类型里没有无符号类型，int为有符号32位数，最高位为1表示负数，最高位为0表示正数，因此1&lt;&lt;31将溢出）
+负数的表示为其正数的相反数加1,如:</p>
+
+<p>-6为00000000 00000000 00000000 00000110变反得到
+11111111 11111111 11111111 11111001,加1得到
+11111111 11111111 11111111 11111010。</p>
+
+<p>&gt;&gt;，右移，12&gt;&gt;2=3，如果带符号，高位补符号位，-15&gt;&gt;2=-4</p>
+
+<p>&gt;&gt;&gt;，右移（包括符号位），12&gt;&gt;2=3，如果带符号，符号位也将右移，高位补零。
+与&amp;：当两边操作数的位同时为1时，结果为1，否则为0。如1100&amp;1010=1000　　</p>
+
+<p>或| ：当两边操作数的位有一边为1时，结果为1，否则为0。如1100|1010=1110　　</p>
+
+<p>非~：0变1,1变0</p>
+
+<p>异或^：两边的位不同时，结果为1，否则为0.如1100^1010=0110</p>
+
+<p>平时多多使用位运算提升逼格：
+判断奇偶数：a&amp;1==0代表偶数，而不是普通的a%2==0；</p>
+"/>
+    
+    <meta property="og:site_name" content="Skyouth's Pages">  
+    <meta property="wb:webmaster" content="5201cdb8e10dbfa6" />  
+    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script> 
+</head>
+<body>
+    
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <a href="/" class="home">Home</a>
+            <a href="/tags/"><b>Categories</b></a>
+            <a href="/archive/">Archive</a>
+            <a href="/about/">Contact me</a>
+        </nav>
+    </header>
+</section>
+
+
+<div class="article-cover">
+    <div>
+        <img src="/images/blog-cover.jpg" class="image">
+    </div>
+</div>
+
+<article>
+
+    <div class="container">
+        <header>
+            <div class="meta">
+                By <address><a rel="author" href="" title="Skyouth" target="_blank">Skyouth</a></address> &mdash;
+                <time pubdate datetime="2015-11-September" title="September 11, 2015">September 11, 2015</time>
+            </div>
+            <h1 class="title">JAVA系列之－－基础知识</h1>
+            <h2 class="subtitle">JAVA基础知识点</h2>
+        </header>
+
+        <section>
+            <h1>位移和位运算</h1>
+
+<p>&lt;&lt;，左移，3&lt;&lt;2=12，（Java的原始类型里没有无符号类型，int为有符号32位数，最高位为1表示负数，最高位为0表示正数，因此1&lt;&lt;31将溢出）
+负数的表示为其正数的相反数加1,如:</p>
+
+<p>-6为00000000 00000000 00000000 00000110变反得到
+11111111 11111111 11111111 11111001,加1得到
+11111111 11111111 11111111 11111010。</p>
+
+<p>&gt;&gt;，右移，12&gt;&gt;2=3，如果带符号，高位补符号位，-15&gt;&gt;2=-4</p>
+
+<p>&gt;&gt;&gt;，右移（包括符号位），12&gt;&gt;2=3，如果带符号，符号位也将右移，高位补零。
+与&amp;：当两边操作数的位同时为1时，结果为1，否则为0。如1100&amp;1010=1000　　</p>
+
+<p>或| ：当两边操作数的位有一边为1时，结果为1，否则为0。如1100|1010=1110　　</p>
+
+<p>非~：0变1,1变0</p>
+
+<p>异或^：两边的位不同时，结果为1，否则为0.如1100^1010=0110</p>
+
+<p>平时多多使用位运算提升逼格：
+判断奇偶数：a&amp;1==0代表偶数，而不是普通的a%2==0；</p>
+
+            
+<div class="social">
+    
+    
+    
+    
+    
+    <div>
+        <!--<script type="text/javascript">document.write('<iframe frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?url=%url%&appkey=&type=3" width="16" height="16">分享到新浪微博</iframe>'.replace(/%url%/,encodeURIComponent(location.href)));</script>-->
+        <wb:share-button addition="number" type="button" ralateUid="2520442401" language="zh_cn"></wb:share-button>
+    </div>
+    
+    
+    <div>
+        <a href="javascript:void(0)" onclick="postToWb();" class="tmblog"><img src="http://v.t.qq.com/share/images/s/weiboicon16.png"></a> <script type="text/javascript">
+        <script type="text/javascript">
+        function postToWb(){
+            var _t = encodeURI(document.title);
+            var _url = encodeURI(document.location);
+            var _appkey = encodeURI("appkey");//你从腾讯获得的appkey
+            var _pic = encodeURI('');//（列如：var _pic='图片url1|图片url2|图片url3....）
+            var _site = '';//你的网站地址
+            var _u = 'http://v.t.qq.com/share/share.php?title='+_t+'&url='+_url+'&appkey='+_appkey+'&site='+_site+'&pic='+_pic;
+            window.open( _u,'转播到腾讯微博', 'width=700, height=680, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no' );
+        }</script>
+    </div>
+    
+</div>
+
+        </section>
+
+        <footer>
+            <address>
+               
+                <p>Written by <strong><a rel="author" href="https://weibo.com/skyouth" title="" target="_blank">Skyouth</a></strong><br>
+                <span class="muted">Runnable,cmbchina</span>
+                </p>
+            </address>
+
+        </footer>
+        <div class="pagination">
+              
+                <a class="btn btn-default" href="/2015/09/13/JDK_source/" class="next">下一篇</a>
+              
+              
+        </div>
+
+        
+        
+        <section>
+            <div id="SOHUCS" sid=""></div>
+<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: 'cyrYAWMyP',
+        conf: 'prod_706d39cb853ef41ff221f946a0469d97'
+    });
+</script>     
+        </section>
+        
+    </div>
+</article>
+
+
+<footer class="site-footer">
+<div class="foot-container">
+        Copyright &copy; 2015 by Skyouth.
+        
+        <nav id="navigation">
+            <a href="/" class="home">Home</a>
+            <a href="/tags/">Categories</a>
+            <a href="/archive/">Archive</a>
+            <a href="/about/">Contact me</a>
+        </nav>
+    </div>
+</footer>
+
+<script src="/assets/jquery-1.7.2.min.js"></script>
+<script src="/assets/main.js"></script>
+
+
+
+
+
+
+
+</body>
+</html>

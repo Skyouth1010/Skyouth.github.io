@@ -1,0 +1,40 @@
+{% if site.inc.sharing.twitter or site.inc.sharing.facebook or site.inc.sharing.gplus or site.inc.sharing.weibo %}
+<div class="social">
+    {% if site.inc.sharing.twitter %}<div>
+        <a href="https://twitter.com/share" class="twitter-share-button" {% if site.inc.sharing.twitter.via %}data-via="{{ site.inc.sharing.twitter.via }}"{% endif %} data-text="{{ page.title }}" data-related="{{ site.inc.twitter }}">Tweet</a>
+    </div>
+    {% endif %}
+    {% if site.inc.sharing.facebook %}
+    <div>
+        <div class="fb-like" data-width="150" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
+    </div>
+    {% endif %}
+    {% if site.inc.sharing.gplus %}
+    <div>
+        <div class="g-plusone" data-size="medium"></div>
+    </div>
+    {% endif %}
+    
+    {% if site.inc.sharing.weibo %}
+    <div>
+        <!--<script type="text/javascript">document.write('<iframe frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?url=%url%&appkey=&type=3" width="16" height="16">分享到新浪微博</iframe>'.replace(/%url%/,encodeURIComponent(location.href)));</script>-->
+        <wb:share-button addition="number" type="button" ralateUid="2520442401" language="zh_cn"></wb:share-button>
+    </div>
+    {% endif %}
+    {% if site.inc.sharing.tencent %}
+    <div>
+        <a href="javascript:void(0)" onclick="postToWb();" class="tmblog"><img src="http://v.t.qq.com/share/images/s/weiboicon16.png"></a> <script type="text/javascript">
+        <script type="text/javascript">
+        function postToWb(){
+            var _t = encodeURI(document.title);
+            var _url = encodeURI(document.location);
+            var _appkey = encodeURI("appkey");//你从腾讯获得的appkey
+            var _pic = encodeURI('');//（列如：var _pic='图片url1|图片url2|图片url3....）
+            var _site = '';//你的网站地址
+            var _u = 'http://v.t.qq.com/share/share.php?title='+_t+'&url='+_url+'&appkey='+_appkey+'&site='+_site+'&pic='+_pic;
+            window.open( _u,'转播到腾讯微博', 'width=700, height=680, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no' );
+        }</script>
+    </div>
+    {% endif %}
+</div>
+{% endif %}
