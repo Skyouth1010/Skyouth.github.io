@@ -1,6 +1,6 @@
 {% if site.inc.sharing.twitter or site.inc.sharing.facebook or site.inc.sharing.gplus or site.inc.sharing.weibo %}
 <div class="social">
-    {% if site.inc.sharing.twitter %}<div>
+    <font style="font-size:16px;vertical-align:top;">分享到：</font>{% if site.inc.sharing.twitter %}<div>
         <a href="https://twitter.com/share" class="twitter-share-button" {% if site.inc.sharing.twitter.via %}data-via="{{ site.inc.sharing.twitter.via }}"{% endif %} data-text="{{ page.title }}" data-related="{{ site.inc.twitter }}">Tweet</a>
     </div>
     {% endif %}
@@ -16,25 +16,53 @@
     {% endif %}
     
     {% if site.inc.sharing.weibo %}
-    <div>
-        <!--<script type="text/javascript">document.write('<iframe frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?url=%url%&appkey=&type=3" width="16" height="16">分享到新浪微博</iframe>'.replace(/%url%/,encodeURIComponent(location.href)));</script>-->
-        <wb:share-button addition="number" type="button" ralateUid="2520442401" language="zh_cn"></wb:share-button>
-    </div>
+        <wb:share-button appkey="998610821" addition="simple" type="icon" ralateUid="2520442401" default_text="分享一下"></wb:share-button>
     {% endif %}
     {% if site.inc.sharing.tencent %}
-    <div>
-        <a href="javascript:void(0)" onclick="postToWb();" class="tmblog"><img src="http://v.t.qq.com/share/images/s/weiboicon16.png"></a> <script type="text/javascript">
-        <script type="text/javascript">
-        function postToWb(){
-            var _t = encodeURI(document.title);
-            var _url = encodeURI(document.location);
-            var _appkey = encodeURI("appkey");//你从腾讯获得的appkey
-            var _pic = encodeURI('');//（列如：var _pic='图片url1|图片url2|图片url3....）
-            var _site = '';//你的网站地址
-            var _u = 'http://v.t.qq.com/share/share.php?title='+_t+'&url='+_url+'&appkey='+_appkey+'&site='+_site+'&pic='+_pic;
-            window.open( _u,'转播到腾讯微博', 'width=700, height=680, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no' );
-        }</script>
-    </div>
+            <script type="text/javascript">
+        (function(){
+        var p = {
+        url:location.href,
+        showcount:'0',/*是否显示分享总数,显示：'1'，不显示：'0' */
+        desc:'',/*默认分享理由(可选)*/
+        summary:'',/*分享摘要(可选)*/
+        title:'',/*分享标题(可选)*/
+        site:'www.skyouth.com',/*分享来源 如：腾讯网(可选)*/
+        pics:'', /*分享图片的路径(可选)*/
+        style:'203',
+        width:22,
+        height:22
+        };
+        var s = [];
+        for(var i in p){
+        s.push(i + '=' + encodeURIComponent(p[i]||''));
+        }
+        document.write(['<a version="1.0" class="qzOpenerDiv" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?',s.join('&'),'" target="_blank">分享</a>'].join(''));
+        document.write(['<a class="qcShareQQDiv" href="http://connect.qq.com/widget/shareqq/index.html?',s.join('&'),'" target="_blank">分享到QQ</a>'].join(''));
+        })();
+        wx.config({
+            debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+            appId: 'wxd0b898302fdae1c2', // 必填，公众号的唯一标识
+            timestamp: , // 必填，生成签名的时间戳
+            nonceStr: 'sfjsfljsldfjkds', // 必填，生成签名的随机串
+            signature: '',// 必填，签名，见附录1
+            jsApiList: [onMenuShareTimeline,onMenuShareAppMessage,onMenuShareQQ,onMenuShareWeibo,onMenuShareQZone] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+        });
+        wx.onMenuShareTimeline({
+    title: '1111', // 分享标题
+    link: '', // 分享链接
+    imgUrl: '/images/nio.png', // 分享图标
+    success: function () { 
+        // 用户确认分享后执行的回调函数
+    },
+    cancel: function () { 
+        // 用户取消分享后执行的回调函数
+    }
+    });
+        </script>
+        <script src="http://qzonestyle.gtimg.cn/qzone/app/qzlike/qzopensl.js#jsdate=20111201" charset="utf-8"></script>
+        <script src="http://connect.qq.com/widget/loader/loader.js" widget="shareqq" charset="utf-8"></script>
+
     {% endif %}
 </div>
 {% endif %}

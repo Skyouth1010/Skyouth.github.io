@@ -2,4 +2,4 @@
 
 Modern Jekyll based blog for Skyouth
 
-goto www.skyouth.com
+just control version here , visit the page on www.skyouth.com

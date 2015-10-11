@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>如何保证项目质量 &mdash; Skyouth's Pages</title>
     <link rel="stylesheet" href="/assets/main.css">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="/images/logo.png"/>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/favicon.ico"/>
     <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Skyouth's Pages" />
     <meta name="title" content="如何保证项目质量 ">
     <link rel="canonical" href="/2015/09/13/quality_manager/">
@@ -17,7 +17,7 @@
     
     <meta property="og:image" content="/images/blog-cover.jpg"/>
     
-    <meta property="og:image" content="/images/logo.png"/>   
+    <meta property="og:image" content="/images/favicon.ico"/>   
     
     
     <meta property="og:description" content="<p>&#160; &#160; &#160; &#160;我们知道，项目三要素包括成本、质量、进度。项目管理的目标主要在于协调这三者关系，寻求低成本、高质量、可控进度的项目目标，产出一个让客户满意的产品。在我行，常规情况下，质量是摆在第一位的。</p>
@@ -79,7 +79,8 @@
     
     <meta property="og:site_name" content="Skyouth's Pages">  
     <meta property="wb:webmaster" content="5201cdb8e10dbfa6" />  
-    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script> 
+    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript" charset="utf-8"></script> 
 </head>
 <body>
     
@@ -111,6 +112,63 @@
             </div>
             <h1 class="title">如何保证项目质量</h1>
             
+            
+<div class="social">
+    <font style="font-size:16px;vertical-align:top;">分享到：</font>
+    
+    
+    
+    
+        <wb:share-button appkey="998610821" addition="simple" type="icon" ralateUid="2520442401" default_text="分享一下"></wb:share-button>
+    
+    
+            <script type="text/javascript">
+        (function(){
+        var p = {
+        url:location.href,
+        showcount:'0',/*是否显示分享总数,显示：'1'，不显示：'0' */
+        desc:'',/*默认分享理由(可选)*/
+        summary:'',/*分享摘要(可选)*/
+        title:'',/*分享标题(可选)*/
+        site:'www.skyouth.com',/*分享来源 如：腾讯网(可选)*/
+        pics:'', /*分享图片的路径(可选)*/
+        style:'203',
+        width:22,
+        height:22
+        };
+        var s = [];
+        for(var i in p){
+        s.push(i + '=' + encodeURIComponent(p[i]||''));
+        }
+        document.write(['<a version="1.0" class="qzOpenerDiv" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?',s.join('&'),'" target="_blank">分享</a>'].join(''));
+        document.write(['<a class="qcShareQQDiv" href="http://connect.qq.com/widget/shareqq/index.html?',s.join('&'),'" target="_blank">分享到QQ</a>'].join(''));
+        })();
+        wx.config({
+            debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+            appId: 'wxd0b898302fdae1c2', // 必填，公众号的唯一标识
+            timestamp: , // 必填，生成签名的时间戳
+            nonceStr: 'sfjsfljsldfjkds', // 必填，生成签名的随机串
+            signature: '',// 必填，签名，见附录1
+            jsApiList: [onMenuShareTimeline,onMenuShareAppMessage,onMenuShareQQ,onMenuShareWeibo,onMenuShareQZone] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+        });
+        wx.onMenuShareTimeline({
+    title: '1111', // 分享标题
+    link: '', // 分享链接
+    imgUrl: '/images/nio.png', // 分享图标
+    success: function () { 
+        // 用户确认分享后执行的回调函数
+    },
+    cancel: function () { 
+        // 用户取消分享后执行的回调函数
+    }
+    });
+        </script>
+        <script src="http://qzonestyle.gtimg.cn/qzone/app/qzlike/qzopensl.js#jsdate=20111201" charset="utf-8"></script>
+        <script src="http://connect.qq.com/widget/loader/loader.js" widget="shareqq" charset="utf-8"></script>
+
+    
+</div>
+
         </header>
 
         <section>
@@ -141,35 +199,6 @@
 <p>&#160; &#160; &#160; &#160;软件产品的整个生命周期中，任何一个环节和阶段、任何一个人的工作质量都会不同程度地、直接或间接地影响产品质量。因此必须把项目组所有人员的积极性和创造性充分调动起来，不断提高项目组所有成员的质量意识，并贯彻到项目的各个阶段之中，使过程体系中的每个环节都得到认真、彻底地执行，使每个阶段的实施和交付物都是高质量的，这样问题不会累积到后面的阶段，从而产出高质量的软件产品。</p>
 
 <p>&#160; &#160; &#160; &#160;质量是产品的生命。质量不合格的产品，即使交付了，也无法让客户满意。而对于银行的软件产品，质量的要求更高。在我们的项目实施过程中，应该始终把软件质量放在第一位，从客户的角度出发考虑问题，做好项目的各个阶段和过程，才能产出让客户满意的产品。</p>
-
-            
-<div class="social">
-    
-    
-    
-    
-    
-    <div>
-        <!--<script type="text/javascript">document.write('<iframe frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?url=%url%&appkey=&type=3" width="16" height="16">分享到新浪微博</iframe>'.replace(/%url%/,encodeURIComponent(location.href)));</script>-->
-        <wb:share-button addition="number" type="button" ralateUid="2520442401" language="zh_cn"></wb:share-button>
-    </div>
-    
-    
-    <div>
-        <a href="javascript:void(0)" onclick="postToWb();" class="tmblog"><img src="http://v.t.qq.com/share/images/s/weiboicon16.png"></a> <script type="text/javascript">
-        <script type="text/javascript">
-        function postToWb(){
-            var _t = encodeURI(document.title);
-            var _url = encodeURI(document.location);
-            var _appkey = encodeURI("appkey");//你从腾讯获得的appkey
-            var _pic = encodeURI('');//（列如：var _pic='图片url1|图片url2|图片url3....）
-            var _site = '';//你的网站地址
-            var _u = 'http://v.t.qq.com/share/share.php?title='+_t+'&url='+_url+'&appkey='+_appkey+'&site='+_site+'&pic='+_pic;
-            window.open( _u,'转播到腾讯微博', 'width=700, height=680, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no' );
-        }</script>
-    </div>
-    
-</div>
 
         </section>
 
@@ -210,8 +239,8 @@
 
 <footer class="site-footer">
 <div class="foot-container">
-        Copyright &copy; 2015 by Skyouth.
-        
+        Copyright &copy; 2015 by Skyouth, All Rights Reserved. |
+        <a href="http://www.miitbeian.gov.cn/">浙ICP备15036000号</a>|
         <nav id="navigation">
             <a href="/" class="home">Home</a>
             <a href="/tags/">Categories</a>

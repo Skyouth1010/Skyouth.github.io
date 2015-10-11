@@ -3,7 +3,7 @@ inc:
   title:        "Skyouth's Pages"
   subtitle:     "Think and summarize everyday"
   cover_image:  blog-cover.jpg
-  logo:         logo.png
+  logo:         favicon.ico
   
   # Company information
   url:          http://www.skyouth.com/
