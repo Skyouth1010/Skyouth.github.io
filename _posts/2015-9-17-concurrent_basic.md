@@ -4,6 +4,7 @@ layout: post
 title: JAVA系列之－－并发编程（基础）
 subtitle: "容器、队列、同步工具类、线程池"
 cover_image: blog-cover.jpg
+article: 15091701
 
 author:
   name: Skyouth

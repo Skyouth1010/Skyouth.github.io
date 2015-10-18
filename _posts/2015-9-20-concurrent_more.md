@@ -4,6 +4,7 @@ layout: post
 title: JAVA系列之－－并发编程（进阶）
 subtitle: "CAS理论、JUC包等"
 cover_image: blog-cover.jpg
+article: 15092001
 
 author:
   name: Skyouth

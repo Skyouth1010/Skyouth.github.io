@@ -3,7 +3,7 @@ layout: post
 
 title: 如何保证项目质量
 cover_image: blog-cover.jpg
-article: 15091501
+article: 15091302
 
 author:
   name: Skyouth

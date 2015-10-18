@@ -4,6 +4,7 @@ layout: post
 title: JAVA系列之－－JDK源码
 subtitle: "JDK源码解读"
 cover_image: blog-cover.jpg
+article: 15091301
 
 author:
   name: Skyouth

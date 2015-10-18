@@ -3,7 +3,7 @@ layout: post
 
 title: 协同项目的管理
 cover_image: blog-cover.jpg
-article: 15091501
+article: 15100701
 
 author:
   name: Skyouth
